@@ -1,0 +1,9 @@
+---
+title: "New Post"
+author: "Cobe Liu"
+date: "2023-09-05"
+categories: [thoughts]
+image: "image.jpg"
+---
+
+Hello! This is my first post
