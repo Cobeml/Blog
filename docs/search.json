@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "New Post\n\n\n\n\n\n\n\nthoughts\n\n\n\n\n\n\n\n\n\n\n\nSep 5, 2023\n\n\nCobe Liu\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/new-post/index.html",
+    "href": "posts/new-post/index.html",
+    "title": "New Post",
+    "section": "",
+    "text": "Hello! This is my first post"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  }
+]
