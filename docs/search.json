@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Blog",
     "section": "",
-    "text": "New Post\n\n\n\n\n\n\n\nthoughts\n\n\n\n\n\n\n\n\n\n\n\nSep 5, 2023\n\n\nCobe Liu\n\n\n\n\n\n\nNo matching items"
+    "text": "HTML/Javascript\n\n\n\n\n\n\n\ncode\n\n\nwebsite\n\n\n\n\n\n\n\n\n\n\n\nSep 13, 2023\n\n\nCobe Liu\n\n\n\n\n\n\n  \n\n\n\n\nNew Post\n\n\n\n\n\n\n\nthoughts\n\n\n\n\n\n\n\n\n\n\n\nSep 5, 2023\n\n\nCobe Liu\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/new-post/index.html",
@@ -19,5 +19,12 @@
     "title": "About",
     "section": "",
     "text": "About this blog"
+  },
+  {
+    "objectID": "posts/html-javascript/index.html",
+    "href": "posts/html-javascript/index.html",
+    "title": "HTML/Javascript",
+    "section": "",
+    "text": "Here I will be creating a simple interactive html page using html and javascript.\nHTML FILE"
   }
 ]
