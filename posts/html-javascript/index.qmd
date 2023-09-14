@@ -8,6 +8,4 @@ image: "image.jpg"
 
 Here I will be creating a simple interactive html page using html and javascript.
 
-```{=html}
-<button href="google.com">HTML FILE</button>
-```
+[HTML Page](simple.html)

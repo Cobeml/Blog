@@ -7,6 +7,11 @@
         <div class="container">
             <button class="change-background" onclick="changeBackgroundColor()">Click Me</button>
         </div>
-        <script src="change-background.js"></script>
+        <script>
+            function changeBackgroundColor() {
+                const randomColor = Math.floor(Math.random()*16777215).toString(16);
+                document.body.style.backgroundColor = "#" + randomColor;
+            }
+        </script>
     </body>
 </html>
