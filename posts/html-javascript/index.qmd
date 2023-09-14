@@ -1,0 +1,13 @@
+---
+title: "HTML/Javascript"
+author: "Cobe Liu"
+date: "2023-09-13"
+categories: [code, website]
+image: "image.jpg"
+---
+
+Here I will be creating a simple interactive html page using html and javascript.
+
+```{=html}
+<iframe src="simple.html" width="100%" height="500px"></iframe>
+```
