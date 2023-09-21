@@ -59,6 +59,21 @@
       post_trial_gap: 2000
     };
 
+    var simple_instructions = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: `
+        <p>In this experiment, a circle will appear in the center 
+        of the screen.</p><p>When the <strong>orange</strong> circle appears, press the letter J 
+        as fast as you can.</p>
+        <div style='width: 700px;'>
+        <div><img src='img/orange.png'></img>
+        <p class='small'><strong>Press the J key</strong></p></div>
+        </div>
+        <p>Press any key to begin.</p>
+      `,
+      post_trial_gap: 2000
+    };
+
     var blue_trial = {
       type: jsPsychImageKeyboardResponse,
       stimulus: 'img/blue.png',
@@ -71,8 +86,12 @@
       choices: ['f', 'j']
     };
 
-    var test_stimuli = [
+    var choice_test_stimuli = [
       { stimulus: "img/blue.png",  correct_response: 'f'},
+      { stimulus: "img/orange.png",  correct_response: 'j'}
+    ];
+
+    var simple_test_stimuli = [
       { stimulus: "img/orange.png",  correct_response: 'j'}
     ];
 
@@ -88,12 +107,12 @@
       }
     };
 
-    var test = {
+    var choice_test = {
       type: jsPsychImageKeyboardResponse,
       stimulus: jsPsych.timelineVariable('stimulus'),
       choices: ['f', 'j'],
       data: {
-        task: 'response',
+        task: 'choice response',
         correct_response: jsPsych.timelineVariable('correct_response')
       },
       on_finish: function(data){
@@ -101,18 +120,53 @@
       }
     };
 
-    var test_procedure = {
-      timeline: [fixation, test],
-      timeline_variables: test_stimuli,
+    var simple_test = {
+      type: jsPsychImageKeyboardResponse,
+      stimulus: jsPsych.timelineVariable('stimulus'),
+      choices: ['f', 'j'],
+      data: {
+        task: 'simple response',
+        correct_response: jsPsych.timelineVariable('correct_response')
+      },
+      on_finish: function(data){
+        data.correct = jsPsych.pluginAPI.compareKeys(data.response, data.correct_response);
+      }
+    };
+
+    var choice_test_procedure = {
+      timeline: [fixation, choice_test],
+      timeline_variables: choice_test_stimuli,
       randomize_order: true,
       repetitions: 5
     };
 
-    var debrief_block = {
+    var simple_test_procedure = {
+      timeline: [fixation, simple_test],
+      timeline_variables: simple_test_stimuli,
+      repetitions: 10
+    };
+
+    var choice_debrief_block = {
       type: jsPsychHtmlKeyboardResponse,
       stimulus: function() {
 
-        var trials = jsPsych.data.get().filter({task: 'response'});
+        var trials = jsPsych.data.get().filter({task: 'choice response'});
+        var correct_trials = trials.filter({correct: true});
+        var accuracy = Math.round(correct_trials.count() / trials.count() * 100);
+        var rt = Math.round(correct_trials.select('rt').mean());
+
+        return `<p>You responded correctly on ${accuracy}% of the trials.</p>
+          <p>Your average response time was ${rt}ms.</p>
+          <p>Press any key to complete the experiment. Thank you!</p>`;
+
+      }
+    };
+
+    var simple_debrief_block = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: function() {
+
+        var trials = jsPsych.data.get().filter({task: 'simple response'});
         var correct_trials = trials.filter({correct: true});
         var accuracy = Math.round(correct_trials.count() / trials.count() * 100);
         var rt = Math.round(correct_trials.select('rt').mean());
@@ -127,17 +181,24 @@
     var choice_timeline = [];
     var go_no_go_timeline = [];
     var simple_timeline = [];
-    var array = [choice_timeline, simple_timeline, go_no_go_timeline];
 
-    choice_timeline.push(preload);
     choice_timeline.push(welcome);
     choice_timeline.push(choice_instructions);
-    choice_timeline.push(test_procedure);
-    choice_timeline.push(debrief_block);
+    choice_timeline.push(choice_test_procedure);
+    choice_timeline.push(choice_debrief_block);
+
+    simple_timeline.push(welcome);
+    simple_timeline.push(simple_instructions);
+    simple_timeline.push(simple_test_procedure);
+    simple_timeline.push(simple_debrief_block);
+
+    var array = [choice_timeline, simple_timeline, go_no_go_timeline];
 
     var timeline = [];
+    timeline.push(preload);
+
     for (var i = 0; i < 3; i++) {
-      var random_index = Math.floor(Math.random() * 3 ) - i;
+      var random_index = Math.floor(Math.random() * (3 - i));
       var experiment = array[random_index];
       array.splice(random_index, 1);
       for (var j = 0; j < experiment.length; j++) {
