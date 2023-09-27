@@ -2,8 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/html-javascript/index.html",
       "/posts/reaction-time/index.html",
+      "/posts/html-javascript/index.html",
       "/posts/new-post/index.html"
     ]
   }
