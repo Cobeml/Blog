@@ -1,11 +1,12 @@
 ---
-title: "Reaction Time"
+title: "HTML/JavaScript"
 author: "Cobe Liu"
-date: "2023-09-20"
-categories: [code, website, psy  chology]
+date: "2023-09-11"
+categories: [code, website, psychology]
 image: "image.jpg"
 ---
 
 Here I will be creating a simple interactive html page using html and javascript.
 
 [HTML Page](simple.html)
+[CSS](style.css)
