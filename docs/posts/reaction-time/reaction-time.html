@@ -17,19 +17,6 @@
       override_safe_mode: true
     });
 
-    var choice_timeline = [];
-    var go_no_go_timeline = [];
-    var simple_timeline = [];
-    var array = [choice_timeline, simple_timeline, go_no_go_timeline];
-    var timeline = [];
-    for (var i = 0; i < 3; i++) {
-      experiment = array[Math.floor(Math.random() * 3)].pop;
-      for (var j = 0; j < experiment.length; j++) {
-        timeline.push(experiment[j]);
-      }
-    }
-
-
     var preload = {
       type: jsPsychPreload,
       images: ['../../img/blue.png', '../../img/orange.png']

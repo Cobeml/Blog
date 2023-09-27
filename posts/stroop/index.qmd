@@ -1,0 +1,11 @@
+---
+title: "Stroop"
+author: "Cobe Liu"
+date: "2023-09-27"
+categories: [code, website]
+image: "image.png"
+---
+
+Here I will be creating two stroop experiments. One is standard and the other manipulates the brightness of the colors of the words. In this manipulated experiment, the words are 25% dimmer. The link below contains both experiments which will be given to subjects in a random order.
+
+[HTML Page](reaction-time.html)
