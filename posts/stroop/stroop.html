@@ -34,7 +34,7 @@
       post_trial_gap: 2000
     };
 
-    function createStroopStimuli(red_value, green_value, blue_value, yellow_value) {
+    function createStroopStimuli(opacity) {
       text_options = ['r','g','b','y'];
       color_options = ['r','g','b','y'];
       var stroop_stimuli = [];
@@ -62,16 +62,16 @@
             text = "YELLOW";
           }
           if (color_options[j] == "r") {
-            color = red_value;
+            color = "red";
           } else if (color_options[j] == "g") {
-            color = green_value;
+            color = "green";
           } else if (color_options[j] == "b") {
-            color = blue_value;
+            color = "blue";
           } else if (color_options[j] == "y") {
-            color = yellow_value;
+            color = "yellow";
           }
 
-          stroop_stimulus.stimulus = "<p style='font-size:60pt; color:" + color + ";'>" + text + "</p>";
+          stroop_stimulus.stimulus = "<p style='font-size:60pt; opacity:" + opacity + "; color:" + color + ";'>" + text + "</p>";
 
           stroop_stimuli.push(stroop_stimulus);
           if (stroop_stimulus.congruency == "Congruent") {
@@ -83,8 +83,8 @@
       return stroop_stimuli;
     }
 
-    var stroop_stimuli = createStroopStimuli("red", "green", "blue", "yellow");
-    var dim_stimuli = createStroopStimuli("#C00000", "#00C000", "#0000C0", "#C0C000");
+    var stroop_stimuli = createStroopStimuli("1");
+    var dim_stimuli = createStroopStimuli(".1");
 
     var fixation = {
       type: jsPsychHtmlKeyboardResponse,
@@ -104,6 +104,7 @@
       choices: ['r', 'g', 'b', 'y'],
       data: {
         task: 'stroop',
+        brightness: 'normal',
         correct_response: jsPsych.timelineVariable('correct_response'),
         congruency: jsPsych.timelineVariable('congruency')
       },
@@ -117,7 +118,8 @@
       stimulus: jsPsych.timelineVariable('stimulus'),
       choices: ['r', 'g', 'b', 'y'],
       data: {
-        task: 'dim_stroop',
+        task: 'stroop',
+        brightness: 'dim',
         correct_response: jsPsych.timelineVariable('correct_response'),
         congruency: jsPsych.timelineVariable('congruency')
       },
