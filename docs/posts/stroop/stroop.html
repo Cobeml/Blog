@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My experiment</title>
+    <script src="../../jspsych/dist/jspsych.js"></script>
+    <script src="../../jspsych/dist/plugin-html-keyboard-response.js"></script>
+    <script src="../../jspsych/dist/plugin-image-keyboard-response.js"></script>
+    <link href="../../jspsych/dist/jspsych.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body></body>
+  <script>
+    var jsPsych = initJsPsych({
+      on_finish: function() {
+        jsPsych.data.displayData();
+      },
+      override_safe_mode: true
+    });
+
+    var welcome = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: "Welcome to the experiment. Press any key to begin."
+    };
+
+    var instructions = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: `
+      <p>In this task, you will see word in a color</p>
+      <p style='color:red;font-size:60pt;'>BLUE</p>
+      <p>Press r, g, b, or y to identify the color, not the word</p>
+      <p>E.g., press r for red in this example</p>
+      <p>Make your responses as quickly and accurately as possible</p>
+      <p>Press any key to begin.</p>
+      `,
+      post_trial_gap: 2000
+    };
+
+    function createStroopStimuli(red_value, green_value, blue_value, yellow_value) {
+      text_options = ['r','g','b','y'];
+      color_options = ['r','g','b','y'];
+      var stroop_stimuli = [];
+      for (var i = 0; i <text_options.length; i++) {
+        for (var j = 0; j < color_options.length; j++) {
+          var stroop_stimulus = {};
+
+          if (text_options[i] == color_options[j]) {
+            stroop_stimulus.congruency = "Congruent";
+          } else {
+            stroop_stimulus.congruency = "Incongruent";
+          }
+
+          stroop_stimulus.correct_response = color_options[j];
+
+          var color;
+          var text = "";
+          if (text_options[i] == "r") {
+            text = "RED";
+          } else if (text_options[i] == "g") {
+            text = "GREEN";
+          } else if (text_options[i] == "b") {
+            text = "BLUE";
+          } else if (text_options[i] == "y") {
+            text = "YELLOW";
+          }
+          if (color_options[j] == "r") {
+            color = red_value;
+          } else if (color_options[j] == "g") {
+            color = green_value;
+          } else if (color_options[j] == "b") {
+            color = blue_value;
+          } else if (color_options[j] == "y") {
+            color = yellow_value;
+          }
+
+          stroop_stimulus.stimulus = "<p style='font-size:60pt; color:" + color + ";'>" + text + "</p>";
+
+          stroop_stimuli.push(stroop_stimulus);
+          if (stroop_stimulus.congruency == "Congruent") {
+            stroop_stimuli.push(stroop_stimulus);
+            stroop_stimuli.push(stroop_stimulus);
+          }
+        }
+      }
+      return stroop_stimuli;
+    }
+
+    var stroop_stimuli = createStroopStimuli("red", "green", "blue", "yellow");
+    var dim_stimuli = createStroopStimuli("#C00000", "#00C000", "#0000C0", "#C0C000");
+
+    var fixation = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: '<div style="font-size:60px;">+</div>',
+      choices: "NO_KEYS",
+      trial_duration: function(){
+        return jsPsych.randomization.sampleWithoutReplacement([1000, 2000], 1)[0];
+      },
+      data: {
+        task: 'fixation'
+      }
+    };
+
+    var display_stroop_item = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: jsPsych.timelineVariable('stimulus'),
+      choices: ['r', 'g', 'b', 'y'],
+      data: {
+        task: 'stroop',
+        correct_response: jsPsych.timelineVariable('correct_response'),
+        congruency: jsPsych.timelineVariable('congruency')
+      },
+      on_finish: function(data){
+        data.correct = jsPsych.pluginAPI.compareKeys(data.response, data.correct_response);
+      }
+    };
+
+    var display_dim_item = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: jsPsych.timelineVariable('stimulus'),
+      choices: ['r', 'g', 'b', 'y'],
+      data: {
+        task: 'dim_stroop',
+        correct_response: jsPsych.timelineVariable('correct_response'),
+        congruency: jsPsych.timelineVariable('congruency')
+      },
+      on_finish: function(data){
+        data.correct = jsPsych.pluginAPI.compareKeys(data.response, data.correct_response);
+      }
+    };
+
+    var stroop_procedure = {
+      timeline: [fixation, display_stroop_item],
+      timeline_variables: stroop_stimuli,
+      randomize_order: true
+    };
+
+    var dim_procedure = {
+      timeline: [fixation, display_dim_item],
+      timeline_variables: dim_stimuli,
+      randomize_order: true
+    };
+
+    var stroop_debrief_block = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: function() {
+        var trials = jsPsych.data.get().filter({task: 'stroop'});
+        var correct_trials = trials.filter({correct: true});
+        var accuracy = Math.round(correct_trials.count() / trials.count() * 100);
+        var rt = Math.round(correct_trials.select('rt').mean());
+
+        return `<p>You responded correctly on ${accuracy}% of the trials.</p>
+          <p>Your average response time was ${rt}ms.</p>
+          <p>Press any key to complete the experiment. Thank you!</p>`;
+
+      }
+    };
+
+    var dim_debrief_block = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: function() {
+        var trials = jsPsych.data.get().filter({task: 'dim_stroop'});
+        var correct_trials = trials.filter({correct: true});
+        var accuracy = Math.round(correct_trials.count() / trials.count() * 100);
+        var rt = Math.round(correct_trials.select('rt').mean());
+
+        return `<p>You responded correctly on ${accuracy}% of the trials.</p>
+          <p>Your average response time was ${rt}ms.</p>
+          <p>Press any key to complete the experiment. Thank you!</p>`;
+
+      }
+    };
+
+    var normal_timeline = [];
+    var dim_timeline = [];
+
+    normal_timeline.push(welcome);
+    normal_timeline.push(instructions);
+    normal_timeline.push(stroop_procedure);
+    normal_timeline.push(stroop_debrief_block);
+
+    dim_timeline.push(welcome);
+    dim_timeline.push(instructions);
+    dim_timeline.push(dim_procedure);
+    dim_timeline.push(dim_debrief_block);
+
+    var array = [normal_timeline, dim_timeline];
+
+    var timeline = [];
+
+    array_length = array.length;
+    for (var i = 0; i < array_length; i++) {
+      var random_index = Math.floor(Math.random() * (array_length - i));
+      var experiment = array[random_index];
+      array.splice(random_index, 1);
+      for (var j = 0; j < experiment.length; j++) {
+        timeline.push(experiment[j]);
+      }
+    }
+
+    jsPsych.run(timeline);
+
+  </script>
+</html>
+</html>
