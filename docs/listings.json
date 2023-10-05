@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/data-analysis/index.html",
       "/posts/stroop/index.html",
       "/posts/reaction-time/index.html",
       "/posts/html-javascript/index.html",
