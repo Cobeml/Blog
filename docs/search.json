@@ -130,7 +130,7 @@
     "href": "posts/stroop/index.html",
     "title": "Stroop",
     "section": "",
-    "text": "Here I will be creating two stroop experiments. One is standard and the other manipulates the brightness of the colors of the words. In this manipulated experiment, the words are 25% dimmer. The link below contains both experiments which will be given to subjects in a random order.\nHTML Page"
+    "text": "Here I will be creating two stroop experiments. One is standard and the other manipulates the brightness of the colors of the words. In this manipulated experiment, the words have an opacity value of 0.1. The link below contains both experiments which will be given to subjects in a random order.\nHTML Page"
   },
   {
     "objectID": "posts/reaction-time/index.html",
