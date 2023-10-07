@@ -142,7 +142,7 @@
     var stroop_debrief_block = {
       type: jsPsychHtmlKeyboardResponse,
       stimulus: function() {
-        var trials = jsPsych.data.get().filter({task: 'stroop'});
+        var trials = jsPsych.data.get().filter({task: 'stroop', brightness: 'normal'});
         var correct_trials = trials.filter({correct: true});
         var accuracy = Math.round(correct_trials.count() / trials.count() * 100);
         var rt = Math.round(correct_trials.select('rt').mean());
@@ -157,7 +157,7 @@
     var dim_debrief_block = {
       type: jsPsychHtmlKeyboardResponse,
       stimulus: function() {
-        var trials = jsPsych.data.get().filter({task: 'dim_stroop'});
+        var trials = jsPsych.data.get().filter({task: 'stroop', brightness: 'dim'});
         var correct_trials = trials.filter({correct: true});
         var accuracy = Math.round(correct_trials.count() / trials.count() * 100);
         var rt = Math.round(correct_trials.select('rt').mean());
