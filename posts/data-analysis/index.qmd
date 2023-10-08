@@ -163,7 +163,7 @@ ggplot(group_mean_RT, aes(x=interaction, y=mean_reaction_time)) +
                 width=.2) +
   ylab("Mean Reaction Time (ms)") +
   xlab("Congruency-Brightness") +  # Update the x-label to reflect the interaction
-  coord_cartesian(ylim=c(400,1500)) +
+  coord_cartesian(ylim=c(400,2000)) +
   theme_classic()
 
 ```
