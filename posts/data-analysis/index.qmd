@@ -163,7 +163,7 @@ ggplot(group_mean_RT, aes(x=interaction, y=mean_reaction_time)) +
                 width=.2) +
   ylab("Mean Reaction Time (ms)") +
   xlab("Congruency-Brightness") +  # Update the x-label to reflect the interaction
-  coord_cartesian(ylim=c(400,2000)) +
+  coord_cartesian(ylim=c(400,3000)) +
   theme_classic()
 
 ```
@@ -189,7 +189,7 @@ group_mean_pc <- subject_pc %>%
             )
 
 # Create an interaction term
-group_mean_RT$interaction <- interaction(group_mean_RT$congruency, group_mean_RT$brightness, sep="-")
+group_mean_pc$interaction <- interaction(group_mean_pc$congruency, group_mean_pc$brightness, sep="-")
 # Plot
 ggplot(group_mean_pc, aes(x=interaction,y=mean_proportion_correct)) +
   geom_bar(stat="identity") +
