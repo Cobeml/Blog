@@ -1,11 +1,12 @@
 ---
-title: "Stroop"
+title: "Picture Memory"
 author: "Cobe Liu"
 date: "2023-09-27"
-categories: [code, website]
+categories: [code, website, memory]
 image: "image.png"
 ---
 
-Here I will be creating two stroop experiments. One is standard and the other manipulates the brightness of the colors of the words. In this manipulated experiment, the words have an opacity value of 0.1. The link below contains both experiments which will be given to subjects in a random order.
+Here are two picture memory experiments. One manipulates the duration that the picture was initally displayed and the other shows each image with either a red, green, yellow, blue, or purple and manipulates if the image was shown again with the same color background.
 
-[HTML Page](stroop.html)
+[Picture Memory with Manipulated Duration](picture_memory_duration.html)
+[Picture Memory with Manipulated Colored Background Consistency](picture_memory_color.html)
