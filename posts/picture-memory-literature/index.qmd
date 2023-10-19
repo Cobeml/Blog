@@ -1,0 +1,171 @@
+---
+title: "Picture Memory Review"
+author: "Cobe Liu"
+date: "2023-10-018"
+categories: [memory, research, academic literature]
+image: "image.png"
+---
+
+Picture Memory Review:
+Levie, W. H., & Hathaway, S. N. (1988). Picture recognition memory: A review of research and theory. Journal of Visual Verbal Languaging, 8(1), 6–45.
+
+# Notes
+- Humans are generally good at picture recognition
+
+## Experiments:
+
+- Subjects are shown set of images and then shown another set, partially containing previously shown images and the subject is to decide whether they have seen the picture before
+    - Forced choice: test where subjects are shown several images and have to pick the one they have seen
+    - Single item: subjects are shown images one at a time and subjects have to decide whether they have seen it before or not
+
+## Results:
+
+- Shepard (1967) displayed 612 color images and tested using two alternative force choice and median accuracy was 98.5%
+- Later experiments showed different but still astounding results when testing with different image set sizes.
+
+## Pictures vs. Words
+
+- Pictures are better remembered than words
+    - pictoral superiority effect
+- Pictogram memory even better than picture memory
+
+## Pictures and Words
+
+- Memory for pictures inc with presence of accompanying words
+- Experimenter provided words:
+    - Memory inc when label is accurate and dec when label is inaccurate
+    - Word specificy inc picture recognition
+    - Words also inc aspects of picture that caption brings attention to
+- Subject generated words:
+    - verbal generated words will help picture recognition
+    - Pictures with more similar descriptions are harder to decipher
+
+### Dual vs Single Coded Memory Models
+
+- Paivio hypothysized that memory is stored in two places as nonverbal memory and verbal memory
+    - Dual coded memory
+    - Evidence to support includes isolations of use of either coding process with different results
+- Single code memory: memory stored as abstract object in common spot, influenced by both verbal and nonverbal pathways
+- Some believe in possible triple coded memory models
+
+## Distinctiveness
+
+- How distinct a picture is increases memory for it
+- Unique images require more processing which would inc memory
+- May explain why picture memory is better than word memory: sensory input from words and therefore sensory memory (in dual code memory model) is less distinct that different pictures so makes words less memorable
+
+### General vs Specific Memory
+
+- Durso and associates believe that specificity help memory
+    - words are less specific so less memorable
+
+## Meaningfulness
+
+- Memory inc if image is more meaningful, and less random
+- If meaning is similar between pictures then memory dec
+
+## Visual Richness
+
+- Hypothesis: Pictures have more potential cues that could trigger the memory due to more richness
+- Nelson, Metzler, and Reed did experiment showing photos, detailed line drawings, and simple line drawings for 10 seconds each and memory for all types were about the same
+- Other experiments show that showing every 100-500 milliseconds made richness matter.
+- King (1986) study was that if recognition was performed immediately after, memory for abstract images and detailed phots was best but if tested a week later, memory for line drawing was best.
+
+## Complexity
+
+- To simulate more complex pictures, Pezdek (1978) as pictures with more figures
+    - More figures meant short term worse but longer term better
+- Generally mixed results in these studies
+
+## Color
+
+- Mixed results
+- College students color matters and not elementary
+- Color helps when people visualize black and white image filled with specific color of their choice and then shown image later with that color
+
+## Others
+
+- Figure ground separation is useful
+- Motion is useful
+- Brightness is useful
+
+## Memory for Parts
+
+- Memory is contained holistically and in detail
+- Detail is focused on points of interest
+- Images shown for short durations are more hollistically stored
+- Actors or Doers are more likely to be recognized than subjects in image who do nothing or are acted upon in images
+- Inventory information (objects in image)stays in memory for 4 months while descriptive goes away quick
+
+### Orientation
+
+- Mirror images are hard to spot unless flip is meaningful in some way
+
+## Level of Processing
+
+- Researchers manipulate depth of processing by asking questions about images
+    - deep semantic processing caused by question like “is the scene located in the US?” is more beneficial to memory than shallow like “what colors are in the image?”
+- Mental elaboration inc the memory to an extent
+    - Work your mind has to do to fill in the blanks will increase memory as you had to elaborate more but has diminishing returns
+- When asked to make character judgements of subjects of images, test subjects performed better at later memory than if they focused on details
+- Conceptual encoding by asking subject questions about object in photo’s function increases memory more than schematic encoding and acoustic encoding
+
+## Presentation Duration
+
+- Duration matters up to about 2 seconds depending on image complexity - after that there is a ceiling effect
+
+## Interstimulus interval
+
+- Time in between inc means inc memory
+- And visualizing image in that time also inc memory
+- When time between is varied with images, there is no difference in memory. This is because the picture rehearsal stage will not occur for as long as the break period as subjects are unsure how much time they have
+
+## Test Delay
+
+- Delay decreases the memory but a lot is still maintained long term
+
+## Test type (force choice v single item)
+
+- single item is harder as with force choice you can determine if you have seen one or have not seen one to determine the right choice
+- We are better at knowing when we have not seen something
+- In force choice, similar distractor image will dec performance
+- Single item performance is worse because of false negatives not false positives
+- More distractors means worse performance
+
+## Test modality change
+
+- Better if train and test are the same modality
+
+## Individual differences
+
+- Not big differences across people in the same age group
+- More difference comes with recognizing faces than other types of images
+
+### Age group differences
+
+- Performance generally inc with age
+- Older people are more likely to make inferences based on seeing pictures they have never seen before
+- Even older people with memory issues do not decline and even improve in picture memory
+
+### Sex Differences
+
+- Women generally better at faces
+
+## Experience with class of stimuli
+
+- People better with faces of their own race
+    - Not true with children
+
+## Face Recognition
+
+- People are very good at remembering faces
+- More detailed the photo the better
+- Even if the face changes (the person aged) recognition only drops a little
+- Left face better for recognition that the right half
+- Possibly different memory pathway
+
+## Eye Witness Research
+
+- Witness of crimes can recognize perpetrator above chance.
+- Confidence does not affect performance in selecting perpetrator
+- When people are allowed to say I don’t know, false positives go down and true positives remain constant.

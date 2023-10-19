@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/picture-memory-literature/index.html",
       "/posts/picture_memory/index.html",
       "/posts/data-analysis/index.html",
       "/posts/stroop/index.html",
