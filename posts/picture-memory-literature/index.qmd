@@ -6,10 +6,8 @@ categories: [memory, research, academic literature]
 image: "image.png"
 ---
 
-Picture Memory Review:
+# Picture Memory Review:
 Levie, W. H., & Hathaway, S. N. (1988). Picture recognition memory: A review of research and theory. Journal of Visual Verbal Languaging, 8(1), 6–45.
-
-# Notes
 - Humans are generally good at picture recognition
 
 ## Experiments:
