@@ -169,3 +169,81 @@ Levie, W. H., & Hathaway, S. N. (1988). Picture recognition memory: A review of 
 - Witness of crimes can recognize perpetrator above chance.
 - Confidence does not affect performance in selecting perpetrator
 - When people are allowed to say I don’t know, false positives go down and true positives remain constant.
+
+# Bessette-Symons, Brandy A. “The Robustness of False Memory for Emotional Pictures.” Memory, vol. 26, no. 2, Feb. 2018, pp. 171–88. DOI.org (Crossref), https://doi.org/10.1080/09658211.2017.1339091.
+
+- Many believe emotion increases memory and picture memory accuracy
+- When given short or long intervals between pictures, emotion increased false alarm rates
+- Long intervals increased hit rates
+    - hit rates indicate increased recognition
+- Emotional pictures are more related than other images but this relatedness does not fully account for the false alarm rate discrepancy
+
+## Emotional Response - Previous Research on Inc Hit Rates
+
+- Arousing emotional response can be measured by stress hormone release which activates the amygdala
+- Amygdala activation modulates memory areas of brain (medial temporal lobe and hippocampus)
+    - this increases hit rates and recognition
+- Non arousal emotional response comes in the prefrontal hippocampus
+    - Also leads to better hit rates
+- Negative arousing is better for memory than any other emotional response
+
+## Research on False Positives
+
+- Also might increase false positives
+    - Lots of research done with words that confirms this
+    - Is it true with images?
+
+### Fuzzy trace theory
+
+- Two types of memory stored with emotional picture
+    - verbatim trace with details
+    - gist trace with meaning
+- Inc in Emotion (mostly negative) inc gist memory
+- Positive response might inc verbatim memory
+- verbatim memory and performance are positively correlated
+- gist memory and false positives are positively correlated
+
+### Amygdala Response pics v words
+
+- Amygdala response with words is more right side which is more gist
+- with pics in bilateral  which may inc verbatim
+- gist memory may not affect hit rates
+
+## Experiment 1
+
+- 65 college students, 5 were excluded due to being outliers in picture recognition and bias estimates
+- Picked 270 pictures, divided into 90 positive, 90 neutral, 90 negative, no extreme photos
+
+### Experiment 1a low arousal controlled content
+
+- controlled for relatedness by including images from groups with images based on amount of humans, and amount of animals in picture
+    - equated amount from each group in each positive, negative, and neutral section
+
+### Experiment 1b low arousal uncontrolled content
+
+- content not controlled
+
+### Results
+
+- Hit rate increases with less control
+- No effect of content on emotion
+- emotion did not effect hit rates
+- emotion did effect false positives
+- emotion did effect acuracy - lower accuracy for negative pictures
+
+## Experiment 2
+
+- Same Process except include extreme pictures including mutilation
+- Same control and uncontrolled groups
+
+### Results
+
+- Emotion increased the false positives
+- When content is controlled, positive had greatest false alarms and neutral had least
+- When content is uncontrolled, positive and negative false alarm rates are the same.
+- emotion reduces everything
+
+## Experiment 3 - Delayed testing, one week after encoding
+
+- Greater hit rates for negative
+- Tested relatedness effect and also
