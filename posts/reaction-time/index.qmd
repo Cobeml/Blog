@@ -8,4 +8,6 @@ image: "image.png"
 
 Here I will be creating reaction time expirements based on Donders model.
 
-[HTML Page](reaction-time.html)
+[Reaction Time Test](reaction-time.html)
+
+[Load Images](img)
