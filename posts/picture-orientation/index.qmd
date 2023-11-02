@@ -6,9 +6,13 @@ categories: [orientation, picture memory, literature]
 image: "image.jpeg"
 ---
 
+Scapinello, K. F., & Yarmey, A. D. (1970). The role of familiarity and orientation in immediate and delayed recognition of pictorial stimuli. Psychonomic Science, 21(6), 329–330.
 - The authors used three types of stimuli: human faces, canine faces, and buildings. They manipulated the familiarity (presented once or seven times) and the orientation (upright or rotated) of the stimuli in a part-to-whole transfer paradigm.
-- The main findings were:
+- Findings:
     * Familiar stimuli were better recognized than unfamiliar stimuli, regardless of orientation and recall interval.
-    * Recognition performance declined with stimulus rotation and a 20-min delay, especially for human faces.
+    * Recognition performance declined with stimulus rotation especially for human faces.
     * The decline for human faces was independent of familiarity, suggesting a face-specific factor that makes them more sensitive to rotation.
-    * The authors speculated that the face-specific factor might be related to the distribution of structural cues in human faces, which undergo greater distortion with rotation than other stimuli.
+    * The authors speculated that the face-specific factor might be related to how the face cues are more relliant on orientation.
+
+Vogel, Juliet M. “The Influence of Verbal Descriptions versus Orientation Codes on Kindergartners’ Memory for the Orientation of Pictures.” Child Development, vol. 50, no. 1, Mar. 1979, pp. 239–42. EBSCOhost, https://doi.org/10.2307/1129062.
+
