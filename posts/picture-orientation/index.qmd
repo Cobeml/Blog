@@ -1,0 +1,14 @@
+---
+title: "Image Orientation"
+author: "Cobe Liu"
+date: "2023-11-02"
+categories: [orientation, picture memory, literature]
+image: "image.jpeg"
+---
+
+- The authors used three types of stimuli: human faces, canine faces, and buildings. They manipulated the familiarity (presented once or seven times) and the orientation (upright or rotated) of the stimuli in a part-to-whole transfer paradigm.
+- The main findings were:
+    * Familiar stimuli were better recognized than unfamiliar stimuli, regardless of orientation and recall interval.
+    * Recognition performance declined with stimulus rotation and a 20-min delay, especially for human faces.
+    * The decline for human faces was independent of familiarity, suggesting a face-specific factor that makes them more sensitive to rotation.
+    * The authors speculated that the face-specific factor might be related to the distribution of structural cues in human faces, which undergo greater distortion with rotation than other stimuli.
