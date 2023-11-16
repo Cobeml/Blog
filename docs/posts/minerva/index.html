@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cobe Liu">
-<meta name="dcterms.date" content="2023-11-09">
+<meta name="dcterms.date" content="2023-11-16">
 
-<title>Blog - Picture Memorability</title>
+<title>Blog - MINERVA</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,11 +108,11 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Picture Memorability</h1>
+      <h1 class="title">MINERVA</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">picture memory</div>
+                <div class="quarto-category">instance theory</div>
                 <div class="quarto-category">literature</div>
-                <div class="quarto-category">computer vision</div>
+                <div class="quarto-category">cognitive modeling</div>
               </div>
                   </div>
   </div>
@@ -130,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 9, 2023</p>
+        <p class="date">November 16, 2023</p>
       </div>
     </div>
     
@@ -148,29 +148,15 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Isola, P., Xiao, J., Torralba, A., &amp; Oliva, A. (2011). What makes an image memorable? Computer Vision and Pattern Recognition (CVPR), 2011 IEEE Conference On, 145–152.</p>
+<p>Jamieson, R. K., Johns, B. T., Vokey, J. R., &amp; Jones, M. N. (2022). Instance theory as a domain-general framework for cognitive psychology. Nature Reviews Psychology. https://doi.org/10.1038/s44159-022-00025-3</p>
 <ul>
-<li>investigates the problem of predicting how memorable an image will be, what image features and labels contribute to memorability</li>
-<li>used database of 2222 images with memorability scores measured by a visual memory game on Amazon Mechanical Turk. Participants had to detect repeated images in a stream of pictures</li>
-<li>The paper analyzes the consistency of image memorability across different viewers, and finds a correlation between memorability scores measured on independent sets of participants
-<ul>
-<li>p they cite is not a p-value but a measure of correlation called Spearman score</li>
-</ul></li>
-<li>The paper explores general non-semantic global features and semantic features and explores how they relate to memorability
-<ul>
-<li>non-semantic features were not predictive (low correlation)</li>
-<li>the number of labled objects or labled spaces (the amount of semantics in the image) correlates better with image memorability</li>
-<li>different objects increase memorability differently (people, cars, seating, and floors score well and buildings, ceilings, skies, trees, and mountains score low)</li>
-</ul></li>
-<li>They also compare models they created that take many global features into account to predict image memorability. The global feature aggregates also include features that indicate how many labled objects there are. This model performed well and performed better when combined with Labeled Multiscale Object Areas and Scene Categories</li>
+<li><strong>Instance theory</strong>: A perspective that assumes memory is a single system that records specific events, and general knowledge emerges from episodic memory during retrieval. It challenges the dominant view of multiple memory systems. Can explain the following in a unified model:</li>
+<li><strong>Memory and categorization</strong>: Instance theory explains how people can categorize items based on their similarity to stored instances, without abstracting prototypes or rules. It also accounts for false memory effects and amnesia cases.</li>
+<li><strong>Language</strong>: Instance theory shows how word meanings, speech normalization, and implicit grammar learning can be derived from memory retrieval, without requiring separate semantic or rule-based systems.</li>
+<li><strong>Associative learning</strong>: Instance theory simulates various phenomena in classical and operant conditioning, such as blocking, overshadowing, and retrospective revaluation, by using memory retrieval and context cues.</li>
 </ul>
-<section id="experiment-proposal" class="level1">
-<h1>Experiment Proposal</h1>
-<p>We could show objects in which the images are from different categories and subjects are shown images from these sets but with different distributions from each set.</p>
-<p>We could show pictures with objects that do not often go together and ones that have objects that go together and see if their model is still predictive. It probably would not be becase their model does not take the relationship of objects into account. One way to simulate this would be to map the how different combinations of objects are linked to memory.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
