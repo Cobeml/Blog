@@ -1,26 +1,15 @@
 ---
-title: "Picture Memorability"
+title: "MINERVA"
 author: "Cobe Liu"
-date: "2023-11-09"
-categories: [picture memory, literature, computer vision]
+date: "2023-11-16"
+categories: [instance theory, literature, cognitive modeling]
 image: "image.png"
 ---
 
-Isola, P., Xiao, J., Torralba, A., & Oliva, A. (2011). What makes an image memorable? Computer Vision and Pattern Recognition (CVPR), 2011 IEEE Conference On, 145–152.
+Jamieson, R. K., Johns, B. T., Vokey, J. R., & Jones, M. N. (2022). Instance theory as a domain-general framework for cognitive psychology. Nature Reviews Psychology. https://doi.org/10.1038/s44159-022-00025-3
 
 
-- investigates the problem of predicting how memorable an image will be, what image features and labels contribute to memorability
-- used database of 2222 images with memorability scores measured by a visual memory game on Amazon Mechanical Turk. Participants had to detect repeated images in a stream of pictures
-- The paper analyzes the consistency of image memorability across different viewers, and finds a correlation between memorability scores measured on independent sets of participants
-    * p they cite is not a p-value but a measure of correlation called Spearman score
-- The paper explores general non-semantic global features and semantic features and explores how they relate to memorability
-    * non-semantic features were not predictive (low correlation)
-    * the number of labled objects or labled spaces (the amount of semantics in the image) correlates better with image memorability
-    * different objects increase memorability differently (people, cars, seating, and floors score well and buildings, ceilings, skies, trees, and mountains score low)
-- They also compare models they created that take many global features into account to predict image memorability. The global feature aggregates also include features that indicate how many labled objects there are. This model performed well and performed better when combined with Labeled Multiscale Object Areas and Scene Categories
-
-# Experiment Proposal
-We could show objects in which the images are from different categories and subjects are shown images from these sets but with different distributions from each set.
-
-We could show pictures with objects that do not often go together and ones that have objects that go together and see if their model is still predictive. It probably would not be becase their model does not take the relationship of objects into account. One way to simulate this would be to map the how different combinations of objects are linked to memory. 
-
+- **Instance theory**: A perspective that assumes memory is a single system that records specific events, and general knowledge emerges from episodic memory during retrieval. It challenges the dominant view of multiple memory systems. Can explain the following in a unified model:
+- **Memory and categorization**: Instance theory explains how people can categorize items based on their similarity to stored instances, without abstracting prototypes or rules. It also accounts for false memory effects and amnesia cases.
+- **Language**: Instance theory shows how word meanings, speech normalization, and implicit grammar learning can be derived from memory retrieval, without requiring separate semantic or rule-based systems.
+- **Associative learning**: Instance theory simulates various phenomena in classical and operant conditioning, such as blocking, overshadowing, and retrospective revaluation, by using memory retrieval and context cues.
