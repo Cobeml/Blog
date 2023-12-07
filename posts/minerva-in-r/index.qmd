@@ -1,0 +1,105 @@
+---
+title: "MINERVA in R"
+author: "Cobe Liu"
+date: "2023-12-7"
+categories: [instance theory, literature, cognitive modeling]
+image: "image.png"
+---
+
+Below is a Minerva model in R. 
+Code provided here: https://www.crumplab.com/psyc2001/blog/12_Minerva/
+
+```{r, eval=FALSE}
+install.packages('devtools')
+devtools::install_github("CrumpLab/RsemanticLibrarian")
+install.packages('lsa')
+install.packages('tidyverse')
+```
+
+```{r}
+
+generate_unique_random_items <- function(num_items = 100,
+                                         vector_length = 20){
+  items <- t(replicate(num_items,
+                   sample( rep(c(1,-1), vector_length/2) )
+                   ))
+
+  correlation_matrix <- cor(t(items))
+  upper_triangle <- correlation_matrix[upper.tri(correlation_matrix)]
+  if (length(upper_triangle[upper_triangle == 1]) == 0){
+    return(items)
+  } else {
+    print(1)
+    generate_unique_random_items(num_items,vector_length)
+  }
+
+}
+
+items <- generate_unique_random_items(num_items = 100, vector_length = 20)
+
+
+```
+
+
+
+
+```{r}
+vector_length <- 20
+num_items <- 100
+
+# make random feature vectors for each item
+# Rows are items
+# Columns are features
+items <- items <- generate_unique_random_items(num_items = 100, vector_length = 20)
+
+# define indices for old and new items
+old <- 1:50
+new <- 51:100
+
+# put old items into a memory matrix
+memory <- items[old,]
+
+# create a data frame to hold model results
+simulation_data <- data.frame()
+
+## loop through all items as cues to memory
+
+for(i in 1:100){
+     
+  # get an item to probe memory
+  probe_id <- i
+  probe <- items[probe_id,]
+  
+  # compute similarities between probe and all traces
+  similarities <- RsemanticLibrarian::cosine_x_to_m(probe,memory)^3
+  
+  # activate traces by weighted similarity
+  activations <- memory * c(similarities)
+  
+  # generate echo and global activation
+  echo <- colSums(activations)
+  global_activation <- sum(similarities)
+  
+  # compare echo to probe
+  echo_cue_similarity <- lsa::cosine(probe,echo)
+  
+  trial_results <- data.frame(item = i,
+                              global_activation = global_activation,
+                              echo_cue_similarity = echo_cue_similarity)
+  
+  # add trial results to simulation data frame
+  simulation_data <- rbind(simulation_data,trial_results)
+}
+
+library(tidyverse)
+
+simulation_data <- simulation_data %>%
+  mutate(item_type = rep(c("old","new"), each = 50))
+
+simulation_means <- simulation_data %>%
+  group_by(item_type) %>%
+  summarize(mean_echo_cue_similarity = mean(echo_cue_similarity),
+            mean_global_activation = mean(global_activation))
+
+knitr::kable(simulation_means)
+```
